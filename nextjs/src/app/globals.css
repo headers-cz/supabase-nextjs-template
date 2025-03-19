@@ -298,6 +298,44 @@
   --color-accent-900: #310036;
 }
 
+.theme-cyber {
+  /* Primary colors - Neon Blue */
+  --color-primary-50: #edfcff;
+  --color-primary-100: #d6f9ff;
+  --color-primary-200: #b0f3ff;
+  --color-primary-300: #70e9ff;
+  --color-primary-400: #38d9ff;
+  --color-primary-500: #0bc4ff;
+  --color-primary-600: #00a1d6;
+  --color-primary-700: #0077a3;
+  --color-primary-800: #005e82;
+  --color-primary-900: #004c6b;
+
+  /* Secondary colors - Dark Tech */
+  --color-secondary-50: #f2f2f7;
+  --color-secondary-100: #e1e1ec;
+  --color-secondary-200: #c4c4d4;
+  --color-secondary-300: #9c9cb7;
+  --color-secondary-400: #52526e;
+  --color-secondary-500: #333342;
+  --color-secondary-600: #252532;
+  --color-secondary-700: #1b1b25;
+  --color-secondary-800: #13131a;
+  --color-secondary-900: #0a0a0f;
+
+  /* Accent colors - Neon Pink */
+  --color-accent-50: #fff0f7;
+  --color-accent-100: #ffe1f0;
+  --color-accent-200: #ffc6e6;
+  --color-accent-300: #ff9bd3;
+  --color-accent-400: #ff56b3;
+  --color-accent-500: #ff0095;
+  --color-accent-600: #e0007f;
+  --color-accent-700: #bc0069;
+  --color-accent-800: #980054;
+  --color-accent-900: #7a0044;
+}
+
 @layer components {
   .btn-primary {
     @apply bg-primary-600 text-white hover:bg-primary-700 transition-colors;
