@@ -336,6 +336,44 @@
   --color-accent-900: #7a0044;
 }
 
+.theme-luxury {
+  /* Primary colors - Deep Navy */
+  --color-primary-50: #f0f5fa;
+  --color-primary-100: #dae5f3;
+  --color-primary-200: #b6cce6;
+  --color-primary-300: #86a9d3;
+  --color-primary-400: #5681b9;
+  --color-primary-500: #3c64a0;
+  --color-primary-600: #2f4e83;
+  --color-primary-700: #26406c;
+  --color-primary-800: #1e3256;
+  --color-primary-900: #182943;
+
+  /* Secondary colors - Rich Charcoal */
+  --color-secondary-50: #f4f4f6;
+  --color-secondary-100: #e4e5e9;
+  --color-secondary-200: #cacbd3;
+  --color-secondary-300: #a5a7b6;
+  --color-secondary-400: #7a7c93;
+  --color-secondary-500: #555873;
+  --color-secondary-600: #3e405a;
+  --color-secondary-700: #2e3044;
+  --color-secondary-800: #1f2031;
+  --color-secondary-900: #161722;
+
+  /* Accent colors - Elegant Gold */
+  --color-accent-50: #fbf8f0;
+  --color-accent-100: #f7f0d7;
+  --color-accent-200: #f3e4b3;
+  --color-accent-300: #eed38b;
+  --color-accent-400: #e8bc5a;
+  --color-accent-500: #d3a53b;
+  --color-accent-600: #b7892a;
+  --color-accent-700: #956f22;
+  --color-accent-800: #7a5a1d;
+  --color-accent-900: #634819;
+}
+
 @layer components {
   .btn-primary {
     @apply bg-primary-600 text-white hover:bg-primary-700 transition-colors;
