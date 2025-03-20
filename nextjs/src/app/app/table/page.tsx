@@ -22,7 +22,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useGlobal } from "@/lib/context/GlobalContext";
 import { createSPASassClient } from "@/lib/supabase/client";
 import { AlertCircle, CheckCircle, Loader2, Plus, Trash2 } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 import { Database } from "@/lib/types";
 
@@ -143,13 +143,7 @@ export default function TaskManagementPage() {
   const [filter, setFilter] = useState<boolean | null>(null);
   const [showConfetti, setShowConfetti] = useState<boolean>(false);
 
-  useEffect(() => {
-    if (user?.id) {
-      loadTasks();
-    }
-  }, [filter, user?.id]);
-
-  const loadTasks = async (): Promise<void> => {
+  const loadTasks = useCallback(async (): Promise<void> => {
     try {
       const isFirstLoad = initialLoading;
       if (!isFirstLoad) setLoading(true);
@@ -171,7 +165,13 @@ export default function TaskManagementPage() {
       setLoading(false);
       setInitialLoading(false);
     }
-  };
+  }, [filter, initialLoading]);
+
+  useEffect(() => {
+    if (user?.id) {
+      loadTasks();
+    }
+  }, [user?.id, loadTasks]);
 
   const handleRemoveTask = async (id: number): Promise<void> => {
     try {
