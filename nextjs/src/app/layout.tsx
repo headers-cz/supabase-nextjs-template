@@ -1,36 +1,46 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { Analytics } from '@vercel/analytics/next';
 import CookieConsent from "@/components/Cookies";
-import { GoogleAnalytics } from '@next/third-parties/google'
-
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/next";
+import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: process.env.NEXT_PUBLIC_PRODUCTNAME,
   description: "The best way to build your SaaS product.",
 };
 
-export default function RootLayout({
+// Označení stránek jako dynamic pro podporu jazyka
+export const dynamic = "force-dynamic";
+
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params?: { locale?: string };
 }>) {
-  let theme = process.env.NEXT_PUBLIC_THEME
-  if(!theme) {
-    theme = "theme-sass3"
+  let theme = process.env.NEXT_PUBLIC_THEME;
+  if (!theme) {
+    theme = "theme-sass3";
   }
   const gaID = process.env.NEXT_PUBLIC_GOOGLE_TAG;
-  return (
-    <html lang="en">
-    <body className={theme}>
-      {children}
-      <Analytics />
-      <CookieConsent />
-      { gaID && (
-          <GoogleAnalytics gaId={gaID}/>
-      )}
 
-    </body>
+  // Získání zpráv pro aktuální jazyk
+  const locale = params?.locale ?? "en";
+  const messages = await getMessages({ locale });
+
+  return (
+    <html lang={locale}>
+      <body className={theme}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+        <Analytics />
+        <CookieConsent />
+        {gaID && <GoogleAnalytics gaId={gaID} />}
+      </body>
     </html>
   );
 }

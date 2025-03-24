@@ -1,0 +1,26 @@
+{
+  "common": {
+    "title": "Welcome",
+    "description": "The best way to build your SaaS product."
+  },
+  "auth": {
+    "login": {
+      "title": "Sign In",
+      "email": "Email address",
+      "password": "Password",
+      "forgotPassword": "Forgot your password?",
+      "signIn": "Sign in",
+      "signingIn": "Signing in...",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up",
+      "orContinueWith": "Or continue with",
+      "continueWith": "Continue with",
+      "unknownError": "An unknown error occurred",
+      "termsAgree": "By creating an account, you agree to our",
+      "termsConditions": "Terms and Conditions",
+      "and": "and",
+      "privacyPolicy": "Privacy Policy"
+    },
+    "backToHome": "Back to Homepage"
+  }
+}

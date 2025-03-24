@@ -1,0 +1,26 @@
+{
+  "common": {
+    "title": "Vítejte",
+    "description": "Nejlepší způsob, jak vybudovat váš SaaS produkt."
+  },
+  "auth": {
+    "login": {
+      "title": "Přihlášení",
+      "email": "E-mailová adresa",
+      "password": "Heslo",
+      "forgotPassword": "Zapomněli jste heslo?",
+      "signIn": "Přihlásit se",
+      "signingIn": "Přihlašování...",
+      "noAccount": "Nemáte účet?",
+      "signUp": "Registrovat se",
+      "orContinueWith": "Nebo pokračujte s",
+      "continueWith": "Pokračovat s",
+      "unknownError": "Došlo k neznámé chybě",
+      "termsAgree": "Vytvořením účtu souhlasíte s našimi",
+      "termsConditions": "Podmínkami použití",
+      "and": "a",
+      "privacyPolicy": "Zásadami ochrany osobních údajů"
+    },
+    "backToHome": "Zpět na úvodní stránku"
+  }
+}
