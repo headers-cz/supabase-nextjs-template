@@ -16,11 +16,9 @@ export const dynamic = "force-dynamic";
 
 export default async function RootLayout({
   children,
-  params,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-  params?: { locale?: string };
-}>) {
+}) {
   let theme = process.env.NEXT_PUBLIC_THEME;
   if (!theme) {
     theme = "theme-sass3";
@@ -28,7 +26,7 @@ export default async function RootLayout({
   const gaID = process.env.NEXT_PUBLIC_GOOGLE_TAG;
 
   // Získání zpráv pro aktuální jazyk
-  const locale = params?.locale ?? "en";
+  const locale = "en"; // Defaultní hodnota
   const messages = await getMessages({ locale });
 
   return (
