@@ -7,7 +7,6 @@ import {
   Home,
   Key,
   LogOut,
-  LucideListTodo,
   Menu,
   User,
   X,
@@ -51,8 +50,7 @@ export default function AppLayout({
 
   const navigation = [
     { name: "Homepage", href: "/app", icon: Home },
-    { name: "Example Storage", href: "/app/storage", icon: Files },
-    { name: "Example Table", href: "/app/table", icon: LucideListTodo },
+    { name: "Data Storage", href: "/app/storage", icon: Files },
     { name: "User Settings", href: "/app/user-settings", icon: User },
   ];
 
