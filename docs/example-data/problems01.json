@@ -1,0 +1,122 @@
+[
+  {
+    "id": "prob-001",
+    "problem": "Platba kartou je zamítnuta s chybou 'Nedostatečné prostředky'",
+    "solution": "1. Ověřte zůstatek na kartě, 2. Zkontrolujte limity pro online platby, 3. Kontaktujte banku pro potvrzení transakce",
+    "tags": ["payment", "card", "declined"]
+  },
+  {
+    "id": "prob-002",
+    "problem": "Zákazník nemůže dokončit objednávku, stránka se zasekne při načítání platební brány",
+    "solution": "1. Zkontrolujte JavaScript konzoli pro chyby, 2. Ověřte správnou implementaci platební brány, 3. Zkontrolujte CORS nastavení na serveru",
+    "tags": ["checkout", "payment-gateway", "loading"]
+  },
+  {
+    "id": "prob-003",
+    "problem": "Platba proběhla, ale objednávka není v systému označena jako zaplacená",
+    "solution": "1. Zkontrolujte webhook notifikace z platební brány, 2. Ověřte správnost callback URL, 3. Prověřte logy transakcí v administraci platební brány",
+    "tags": ["webhook", "notification", "order-status"]
+  },
+  {
+    "id": "prob-004",
+    "problem": "Zákazníkovi se účtuje částka vícekrát za jednu objednávku",
+    "solution": "1. Implementujte idempotentní klíče pro transakce, 2. Deaktivujte tlačítko odeslání po prvním kliknutí, 3. Zkontrolujte duplicitní volání API platební brány",
+    "tags": ["double-charge", "transaction", "api"]
+  },
+  {
+    "id": "prob-005",
+    "problem": "3D Secure ověření selhává nebo se nezobrazuje při platbě kartou",
+    "solution": "1. Aktualizujte implementaci 3D Secure na nejnovější verzi, 2. Ověřte, že prohlížeč zákazníka podporuje pop-up okna, 3. Zkontrolujte, zda banka vydavatele karty podporuje 3D Secure",
+    "tags": ["3d-secure", "authentication", "card-payment"]
+  },
+  {
+    "id": "prob-006",
+    "problem": "Zákazník nemůže přidat produkt do košíku, zobrazuje se chyba 'Nedostupné'",
+    "solution": "1. Zkontrolujte stav skladu, 2. Ověřte nastavení dostupnosti produktu, 3. Zkontrolujte možné konflikty s rezervačním systémem",
+    "tags": ["cart", "inventory", "availability"]
+  },
+  {
+    "id": "prob-007",
+    "problem": "Rozdílné ceny v košíku a při dokončení objednávky",
+    "solution": "1. Ověřte aplikaci slev a jejich správný výpočet, 2. Zkontrolujte výpočet DPH a dopravy, 3. Zajistěte synchronizaci cen mezi frontendovou a backendovou částí",
+    "tags": ["price", "cart", "checkout"]
+  },
+  {
+    "id": "prob-008",
+    "problem": "PayPal platba je přijata, ale zákazník není přesměrován zpět do obchodu",
+    "solution": "1. Zkontrolujte správné nastavení return URL v PayPal konfiguraci, 2. Ověřte, že zpětné volání není blokováno bezpečnostními nastaveními, 3. Implementujte záložní mechanismus pro kontrolu stavu plateb",
+    "tags": ["paypal", "redirect", "callback"]
+  },
+  {
+    "id": "prob-009",
+    "problem": "Zákazník obdrží chybovou zprávu 'Neplatná měna' při platbě",
+    "solution": "1. Ověřte, že měna v objednávce odpovídá měně podporované platební bránou, 2. Zkontrolujte formát měnového kódu (ISO 4217), 3. Ověřte, zda vybraná platební metoda podporuje danou měnu",
+    "tags": ["currency", "payment", "validation"]
+  },
+  {
+    "id": "prob-010",
+    "problem": "Slevový kód nefunguje, i když je platný a aktivní",
+    "solution": "1. Zkontrolujte podmínky použití slevového kódu (minimální hodnota objednávky, produktové kategorie), 2. Ověřte, že kód nebyl již použit, pokud je na jedno použití, 3. Zkontrolujte správnou implementaci aplikace slevy v košíku",
+    "tags": ["discount", "coupon", "promotion"]
+  },
+  {
+    "id": "prob-011",
+    "problem": "Transakce je zamítnuta s chybou 'Podezřelá aktivita'",
+    "solution": "1. Ověřte, zda IP adresa zákazníka není na blacklistu, 2. Zkontrolujte, zda zákazník nepoužívá VPN nebo proxy, 3. Upravte nastavení detekce podvodů v platební bráně",
+    "tags": ["fraud", "security", "transaction"]
+  },
+  {
+    "id": "prob-012",
+    "problem": "Zákazník neobdrží potvrzovací e-mail po dokončení objednávky",
+    "solution": "1. Zkontrolujte správnost e-mailové adresy, 2. Ověřte, zda e-mailové šablony jsou správně nakonfigurovány, 3. Zkontrolujte spam filtr a nastavení SPF, DKIM a DMARC záznamů",
+    "tags": ["email", "confirmation", "notification"]
+  },
+  {
+    "id": "prob-013",
+    "problem": "Platba je zpracována, ale faktura není automaticky vygenerována",
+    "solution": "1. Ověřte nastavení automatického generování faktur, 2. Zkontrolujte propojení mezi systémem objednávek a fakturačním systémem, 3. Zajistěte správné mapování daňových sazeb a položek",
+    "tags": ["invoice", "billing", "automation"]
+  },
+  {
+    "id": "prob-014",
+    "problem": "Zákazník nemůže dokončit registraci, zobrazuje se chyba 'E-mail již existuje'",
+    "solution": "1. Implementujte funkci pro obnovení hesla, 2. Nabídněte možnost přihlášení přes sociální sítě, 3. Přidejte odkaz na přihlašovací stránku s vysvětlujícím textem",
+    "tags": ["registration", "account", "duplicate"]
+  },
+  {
+    "id": "prob-015",
+    "problem": "Multiměnové přepočty zobrazují nesprávné částky v detailu produktu",
+    "solution": "1. Aktualizujte směnné kurzy pravidelně, 2. Implementujte cachování s častou invalidací pro směnné kurzy, 3. Zajistěte správné zaokrouhlování podle standardů dané měny",
+    "tags": ["multi-currency", "exchange-rate", "pricing"]
+  },
+  {
+    "id": "prob-016",
+    "problem": "Proces vrácení peněz (refund) selhává s chybou 'Transakce nenalezena'",
+    "solution": "1. Ověřte, zda původní transakce byla dokončena a není ve stavu pending, 2. Zkontrolujte, zda používáte správné ID transakce, 3. Ověřte, zda platební brána podporuje vrácení peněz pro daný typ platby",
+    "tags": ["refund", "transaction", "customer-service"]
+  },
+  {
+    "id": "prob-017",
+    "problem": "Zákazníci nemohou přidat recenzi produktu, formulář se neodesílá",
+    "solution": "1. Zkontrolujte validační pravidla formuláře, 2. Ověřte CSRF ochranu a její správnou implementaci, 3. Zkontrolujte JavaScript chyby v konzoli prohlížeče",
+    "tags": ["review", "form", "submission"]
+  },
+  {
+    "id": "prob-018",
+    "problem": "Platební brána zobrazuje chybu 'Neplatný obchodník' při zpracování platby",
+    "solution": "1. Ověřte správnost API klíčů a merchant ID, 2. Zkontrolujte, zda účet obchodníka není pozastaven, 3. Ověřte, zda IP adresa serveru není blokována platební bránou",
+    "tags": ["merchant", "api-key", "authentication"]
+  },
+  {
+    "id": "prob-019",
+    "problem": "Zákazník nemůže změnit dodací adresu po vytvoření objednávky",
+    "solution": "1. Implementujte funkci pro úpravu adresy do určitého stavu objednávky, 2. Vytvořte administrační rozhraní pro zákaznickou podporu, 3. Automatizujte kontrolu dostupnosti dopravy na novou adresu",
+    "tags": ["shipping", "address", "order-management"]
+  },
+  {
+    "id": "prob-020",
+    "problem": "Opakované platby (recurring payments) selhávají po aktualizaci platební karty",
+    "solution": "1. Implementujte notifikaci zákazníka před vypršením platnosti karty, 2. Zajistěte jednoduchý proces aktualizace platebních údajů, 3. Využijte služby automatické aktualizace karet nabízené platebními bránami",
+    "tags": ["recurring", "subscription", "card-update"]
+  }
+]

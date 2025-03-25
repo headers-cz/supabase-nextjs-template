@@ -1,0 +1,122 @@
+[
+  {
+    "id": "prob-021",
+    "problem": "Platební brána nefunguje na mobilních zařízeních, zobrazuje prázdnou obrazovku",
+    "solution": "1. Implementujte responzivní design pro platební formulář, 2. Otestujte kompatibilitu s různými mobilními prohlížeči, 3. Optimalizujte JavaScript kód pro mobilní zařízení",
+    "tags": ["mobile", "responsive", "payment-form"]
+  },
+  {
+    "id": "prob-022",
+    "problem": "Zákazník nemůže použít uloženou platební kartu, objevuje se chyba 'Karta vypršela'",
+    "solution": "1. Implementujte automatickou kontrolu platnosti karet před platbou, 2. Nabídněte možnost aktualizace údajů o kartě v uživatelském profilu, 3. Zašlete e-mailové upozornění před vypršením platnosti karty",
+    "tags": ["saved-card", "expiration", "user-profile"]
+  },
+  {
+    "id": "prob-023",
+    "problem": "Zákazník vidí v košíku chybnou cenu dopravy",
+    "solution": "1. Ověřte správnou konfiguraci zón doručení, 2. Zkontrolujte výpočet ceny dopravy na základě hmotnosti a rozměrů, 3. Aktualizujte ceník dopravců v administraci",
+    "tags": ["shipping", "calculation", "checkout"]
+  },
+  {
+    "id": "prob-024",
+    "problem": "Apple Pay platba selhává s chybou 'Merchant Not Supported'",
+    "solution": "1. Ověřte, že doména je správně verifikována pro Apple Pay, 2. Zkontrolujte SSL certifikát a jeho platnost, 3. Aktualizujte implementaci Apple Pay API na nejnovější verzi",
+    "tags": ["apple-pay", "digital-wallet", "verification"]
+  },
+  {
+    "id": "prob-025",
+    "problem": "Systém nezobrazuje správně měnu podle geolokace zákazníka",
+    "solution": "1. Implementujte správnou detekci země na základě IP adresy, 2. Přidejte možnost manuální změny měny, 3. Používejte cookie pro uchování preferované měny zákazníka",
+    "tags": ["currency", "geolocation", "localization"]
+  },
+  {
+    "id": "prob-026",
+    "problem": "Affiliate provize nejsou správně přiřazovány k objednávkám",
+    "solution": "1. Ověřte správnou implementaci sledovacích cookies, 2. Zkontrolujte dobu expirace affiliate odkazů, 3. Implementujte robustní atribuční model pro více zdrojů návštěvnosti",
+    "tags": ["affiliate", "commission", "tracking"]
+  },
+  {
+    "id": "prob-027",
+    "problem": "Zákazník nemůže dokončit objednávku s chybou 'Neplatná daňová sazba'",
+    "solution": "1. Aktualizujte databázi daňových sazeb podle regionů, 2. Ověřte správnou implementaci výpočtu daně pro mezinárodní objednávky, 3. Zkontrolujte validaci DIČ pro firemní zákazníky",
+    "tags": ["tax", "vat", "checkout"]
+  },
+  {
+    "id": "prob-028",
+    "problem": "Doba načítání stránky produktu je příliš dlouhá, zákazníci opouštějí web",
+    "solution": "1. Optimalizujte velikost a formát produktových obrázků, 2. Implementujte lazy loading pro obsah pod záhybem, 3. Využijte CDN pro rychlejší dodání statických souborů",
+    "tags": ["performance", "page-speed", "optimization"]
+  },
+  {
+    "id": "prob-029",
+    "problem": "Analýza konverzního trychtýře ukazuje vysoké opuštění na stránce platební metody",
+    "solution": "1. Zjednodušte proces výběru platební metody, 2. Přidejte jasné vizuální indikátory bezpečnosti platby, 3. Implementujte A/B testování různých designů platební stránky",
+    "tags": ["conversion", "funnel", "abandonment"]
+  },
+  {
+    "id": "prob-030",
+    "problem": "Integrovaný chatbot nedokáže správně zodpovídat dotazy ohledně plateb a doručení",
+    "solution": "1. Rozšiřte znalostní bázi chatbota o nejčastější otázky zákazníků, 2. Implementujte detekci složitých dotazů a přesměrování na lidskou podporu, 3. Analyzujte konverzace pro identifikaci chybějících odpovědí",
+    "tags": ["chatbot", "customer-support", "FAQ"]
+  },
+  {
+    "id": "prob-031",
+    "problem": "Dynamické ceny produktů nejsou správně aktualizovány při změně parametrů",
+    "solution": "1. Zkontrolujte JavaScript kód pro výpočet ceny, 2. Implementujte AJAX volání pro real-time aktualizaci ceny, 3. Optimalizujte cachování cenových kalkulací na serveru",
+    "tags": ["dynamic-pricing", "product-configuration", "ajax"]
+  },
+  {
+    "id": "prob-032",
+    "problem": "Zákazník obdrží chybu 'Nesoulad adresy' při ověřování karty (AVS)",
+    "solution": "1. Implementujte automatickou opravu formátu adresy, 2. Přidejte jasné pokyny pro formát adresy v platebním formuláři, 3. Nabídněte možnost použít jinou platební metodu",
+    "tags": ["avs", "address-verification", "card-payment"]
+  },
+  {
+    "id": "prob-033",
+    "problem": "Funkce 'Opustit košík a pokračovat později' nefunguje správně",
+    "solution": "1. Implementujte spolehlivé ukládání stavu košíku do lokálního úložiště nebo databáze, 2. Zajistěte správnou synchronizaci mezi zařízeními, 3. Přidejte e-mailové připomenutí opuštěných košíků",
+    "tags": ["cart-abandonment", "persistence", "user-experience"]
+  },
+  {
+    "id": "prob-034",
+    "problem": "Přehled objednávek v zákaznickém účtu nezobrazuje aktuální stav doručení",
+    "solution": "1. Implementujte real-time integraci se systémy dopravců, 2. Zajistěte pravidelnou aktualizaci stavů objednávek, 3. Přidejte přímý odkaz na sledování zásilky",
+    "tags": ["order-tracking", "shipping-status", "customer-account"]
+  },
+  {
+    "id": "prob-035",
+    "problem": "B2B zákazníci nemohou využít množstevní slevy při nákupu v e-shopu",
+    "solution": "1. Implementujte cenové skupiny pro B2B zákazníky, 2. Vytvořte automatické aplikování slev podle množství, 3. Přidejte možnost zobrazení personalizovaných cen po přihlášení",
+    "tags": ["b2b", "volume-discount", "pricing"]
+  },
+  {
+    "id": "prob-036",
+    "problem": "GDPR cookie lišta blokuje funkčnost platební brány na některých prohlížečích",
+    "solution": "1. Oddělte esenciální cookies pro platební proces od marketingových cookies, 2. Přesuňte platební iframe mimo oblast ovlivněnou cookie lištou, 3. Otestujte kompatibilitu na různých prohlížečích",
+    "tags": ["gdpr", "cookies", "compliance"]
+  },
+  {
+    "id": "prob-037",
+    "problem": "Cross-selling produkty se nezobrazují správně v košíku a na stránce potvrzení",
+    "solution": "1. Zkontrolujte algoritmus doporučování podobných produktů, 2. Zajistěte, že doporučované produkty jsou skladem, 3. Optimalizujte načítání cross-selling modulů pomocí AJAX",
+    "tags": ["cross-selling", "recommendations", "upsell"]
+  },
+  {
+    "id": "prob-038",
+    "problem": "Zákazník nemůže stáhnout digitální produkty po úspěšné platbě",
+    "solution": "1. Zkontrolujte automatické generování přístupových odkazů, 2. Ověřte správné nastavení expirace downloadů, 3. Implementujte alternativní doručení přes e-mail",
+    "tags": ["digital-products", "download", "delivery"]
+  },
+  {
+    "id": "prob-039",
+    "problem": "Platby v kryptoměnách trvají příliš dlouho na zpracování",
+    "solution": "1. Implementujte systém monitorování transakcí na blockchainu, 2. Poskytněte jasné instrukce o očekávaném času potvrzení, 3. Nabídněte možnost zrychleného potvrzení za vyšší poplatek",
+    "tags": ["cryptocurrency", "blockchain", "transaction-speed"]
+  },
+  {
+    "id": "prob-040",
+    "problem": "Zákazník nemůže použít věrnostní body při dokončení objednávky",
+    "solution": "1. Ověřte správné načítání bodového zůstatku v reálném čase, 2. Zkontrolujte pravidla pro minimální/maximální použití bodů, 3. Implementujte jasný přehled dostupných bodů a jejich hodnoty v košíku",
+    "tags": ["loyalty", "rewards", "points"]
+  }
+]
